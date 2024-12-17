@@ -5,12 +5,12 @@ import Navbar from '../Components/Navbar';
 import '../CSS/HomePage.css'
 import SchemeCard from '../Components/SchemeCard';
 import FooterCom from '../Components/Footer';
-import loader from '../Assets/loader.gif'
+
 
 
 
 function HomePage() {
-  const [message, setMessage] = useState('');
+  // const [message, setMessage] = useState('');
   const [loading,setLoading]=useState(false);
   const [policy,setPolicy]=useState('');
   const [recommendations,setRecommendations]=useState('')
@@ -33,23 +33,22 @@ function HomePage() {
       });
   }, []);
 
-  const handleChange=(e)=>{
-    setPolicy(e.target.value);
+  // const handleChange=(e)=>{
+  //   setPolicy(e.target.value);
     
-  }
+  // }
 
-  const handleSubmit=(e)=>{
-    e.preventDefault();
-    axios
-    .get(`https://nicbackend-production.up.railway.app/result?policy=${policy}`)
-    .then((response)=>{
+  // const handleSubmit=(e)=>{
+  //   e.preventDefault();
+  //   axios
+  //   .get(`https://nicbackend-production.up.railway.app/result?policy=${policy}`)
+  //   .then((response)=>{
      
-      response.data=response.data.slice(1,-1);
-      console.log(response.data.split('+'));
-      setRecommendations(response.data.split("+"));
-    })
-    
-  }
+  //     response.data=response.data.slice(1,-1);
+  //     console.log(response.data.split('+'));
+  //     setRecommendations(response.data.split("+"));
+  //   })
+  // }
   
   const handleUserInput=(e)=>{
     setLoading(true);
