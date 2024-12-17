@@ -10,7 +10,7 @@ import FooterCom from '../Components/Footer';
 
 
 function HomePage() {
-  // const [message, setMessage] = useState('');
+  const [message, setMessage] = useState('');
   const [loading,setLoading]=useState(false);
   const [policy,setPolicy]=useState('');
   const [recommendations,setRecommendations]=useState('')
